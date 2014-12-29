@@ -14,6 +14,7 @@
 		<div class="nav-bar">
 			<ul class="nav nav-pills">
 				<li role="presentation"
+					ui-sref-active="active"
 					ng-repeat="item in ['a', 'b', 'c']">
 
 					<a ui-sref="{{item}}">Section {{ item.toUpperCase() }}</a>
