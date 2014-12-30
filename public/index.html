@@ -1,23 +1,27 @@
 <html>
 	<head>
-		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+		<!-- angular and angular dependencies -->
+		<script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+		<script src="//code.angularjs.org/1.3.8/angular.min.js"></script>
+		<script src="//code.angularjs.org/1.3.8/angular-touch.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.min.js"></script>
 
+		<!-- bootstrap -->
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
-		<link rel="stylesheet" href="themes/styles.css">
+		<!-- angular components -->
+		<script src="src/app/blogs/blogsController.js"></script>
 
+		<!-- base app style and script -->
+		<link rel="stylesheet" href="themes/styles.css">
 		<script src="src/main.js"></script>
 	</head>
 	<body ng-app="app">
 		<div class="nav-bar">
 			<ul class="nav nav-pills">
-				<li role="presentation"
-					ui-sref-active="active"
-					ng-repeat="item in ['a', 'b', 'c']">
-
-					<a ui-sref="{{item}}">Section {{ item.toUpperCase() }}</a>
+				<li role="presentation" ui-sref-active="active">
+					<a ui-sref="blogs">Blog</a>
 				</li>
 			</ul>
 		</div>

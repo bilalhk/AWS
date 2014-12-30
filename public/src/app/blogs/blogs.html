@@ -1,0 +1,6 @@
+<div ng-controller="blogs.controller">
+	<div class="blog panel panel-default" ng-repeat="blog in blogs" ng-click="onBlogClick()">
+		<div class="panel-heading">{{ blog.title }}</div>
+		<div class="panel-body">{{ blog.content }}</div>
+	</div>
+</div>
