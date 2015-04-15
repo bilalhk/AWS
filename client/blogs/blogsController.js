@@ -1,7 +1,7 @@
 module.exports = function($scope, blogsRepository) {
 	blogsRepository.browse()
 		.success(function(httpResult) {
-			$scope.blogs = httpResult.data;
+			$scope.blogs = httpResult;
 		});
 
 	$scope.onBlogClick = function() {
