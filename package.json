@@ -1,0 +1,30 @@
+{
+  "name": "aws",
+  "version": "1.0.0",
+  "description": "To start the server, run `mvn spring-boot:run`",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bilalhk/aws"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bilalhk/aws/issues"
+  },
+  "homepage": "https://github.com/bilalhk/aws",
+  "dependencies": {
+    "browserify": "*",
+    "del": "*",
+    "gulp": "*",
+    "gulp-rename": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-util": "*",
+    "underscore": "*",
+    "vinyl-buffer": "*",
+    "vinyl-source-stream": "*"
+  }
+}
