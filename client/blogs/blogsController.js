@@ -1,5 +1,8 @@
 module.exports = function($scope, blogsRepository) {
-	$scope.blogs = blogsRepository.browse();
+	blogsRepository.browse()
+		.success(function(httpResult) {
+			$scope.blogs = httpResult.data;
+		});
 
 	$scope.onBlogClick = function() {
 		//TODO: view for single blog post?
