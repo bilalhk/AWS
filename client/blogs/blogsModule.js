@@ -1,3 +1,4 @@
+var blogsRepository = require('./blogsRepository');
 var blogsController = require('./blogsController');
 
 var blogsModule = {
@@ -8,6 +9,7 @@ var blogsModule = {
     }
 };
 
-angular.module(blogsModule.$name, []);
+angular.module(blogsModule.$name, [])
+    .factory('blogsRepository', blogsRepository);
 
 module.exports = blogsModule;
