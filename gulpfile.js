@@ -9,8 +9,8 @@ var sourcemaps = require('gulp-sourcemaps');
 var rename = require('gulp-rename');
 var del = require('del');
 
-gulp.task('clean', function() {
-    del([ 'public/**' ])
+gulp.task('clean', function(callback) {
+    del([ 'public/**' ], callback);
 });
 
 gulp.task('javascript', ['clean'], function() {
