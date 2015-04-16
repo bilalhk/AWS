@@ -19,21 +19,20 @@ gulp.task('javascript', ['clean'], function() {
         .bundle()
         .pipe(source('./client/main.js'))
         .pipe(buffer())
-        .pipe(sourcemaps.init({loadMaps: true}))
-        // Add transformation tasks to the pipeline here.
-        .on('error', gutil.log)
-        .pipe(sourcemaps.write('./'))
         .pipe(rename({ dirname: '' }))
+        .pipe(sourcemaps.init({loadMaps: true}))
+        .pipe(sourcemaps.write('./'))
+        .on('error', gutil.log)
         .pipe(gulp.dest('./public'));
 });
 
 gulp.task('html', ['clean'], function() {
-    gulp.src('**/*.html', { base: 'client' })
+    gulp.src('**/*.html', { base: './client' })
         .pipe(gulp.dest('./public'));
 });
 
 gulp.task('css', ['clean'], function() {
-    gulp.src('**/*.css', { base: 'client' })
+    gulp.src('**/*.css', { base: './client' })
         .pipe(gulp.dest('./public'));
 });
 
