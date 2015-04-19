@@ -1,12 +1,14 @@
-<div class="blog panel panel-default" ng-repeat="blog in blogs" ng-click="onBlogClick()">
-	<div class="panel-heading">{{ blog.title }}</div>
-	<div class="panel-body">{{ blog.content }}</div>
-</div>
-<form name="addBlogForm" class="blog panel panel-default">
-	<div class="panel-heading">Add a new Blog Post</div>
-	<div class="panel-body">
-		<div><label>Title</label><input type="text" ng-model="newBlog.title" /></div>
-		<div><label>Content</label><input type="text" ng-model="newBlog.content" /></div>
-		<div class="btn btn-default" ng-click="onAddBlogClick()">Add</div>
+<div class="blogs-container">
+	<div class="blog panel panel-default" ng-repeat="blog in blogs" ng-click="onBlogClick()">
+		<div class="panel-heading">{{ blog.title }}</div>
+		<div class="panel-body">{{ blog.content }}</div>
 	</div>
-</form>
+	<form name="addBlogForm" class="blog panel panel-default">
+		<div class="panel-heading">Add a new Blog Post</div>
+		<div class="panel-body">
+			<div><label>Title</label><input type="text" ng-model="newBlog.title" /></div>
+			<div><label>Content</label><input type="text" ng-model="newBlog.content" /></div>
+			<div class="btn btn-default" ng-click="onAddBlogClick()">Add</div>
+		</div>
+	</form>
+</div>

@@ -10,18 +10,19 @@ import java.util.Date;
 
 @RestController
 public class BlogController{
-	
+
 	@Autowired
 	private BlogStorage blogs;
-	
+
 	@RequestMapping(value="/blogs", method=RequestMethod.GET)
 	public Collection<BlogPost> getAll() {
 		return blogs.findAll();
 	}
-	
+
 	@RequestMapping(value="/blogs", method=RequestMethod.POST)
-	public void addPost(@RequestBody BlogPost post) {
+	public BlogPost addPost(@RequestBody BlogPost post) {
 		post.setTimestamp(new Date());
 		blogs.insert(post);
+		return post;
 	}
 }

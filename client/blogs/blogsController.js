@@ -10,6 +10,7 @@ module.exports = function($scope, blogsRepository) {
 
 	$scope.onAddBlogClick = function() {
 		blogsRepository.create($scope.newBlog)
+			.then(function(httpResult) { $scope.blogs.push(httpResult.data); })
 			.then(function() { delete $scope.newBlog});
 	}
 };
